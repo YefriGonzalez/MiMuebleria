@@ -1,17 +1,27 @@
-
-
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+}
 body{
     background: url(../Imagenes/fondo.jpg);
     background-size: cover;
 }
 .contenedor1{ 
     background: #f9f7f7;
-    width: 24%;
-    height: 400px;
+    width: 30%;
+    height: 500px;
     margin: auto;
     margin-top: 100px;
 }
 .contenedor1 h1{
+    margin-top: 10px;
     text-align: center;
     padding-top: 20px;
     color: #566573;
@@ -19,24 +29,27 @@ body{
 }
 
 .form1{
+    margin-top: 10px;
     width: 100%;
     padding: 50px 20px 10px 20px;
     box-sizing: border-box;
 }
 
 .form1 input[type="text"],input[type="password"]{
+    margin-top: 10px;
     border: none;
     background: none;
     width: 90%;
-    height: 40px;
+    height: 45px;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
 }  
 
 .form1 input[type="submit"]{
+    margin-top: 10px;
     width: 100%;
-    height: 60px;
+    height: 65px;
     background: #1b4f72;
     color:white;
     cursor: pointer;
@@ -51,55 +64,20 @@ body{
     margin-bottom: 40px;
     color: #aed6f1; 
 }
-.contenedor2{
-    background: #f9f7f7;
-    width: 460px;
-    height: 140px;
-    margin: auto;
-    margin-top: 10px;
-}
-
-.form2{
-    width: 100%;
-    padding: 23px 20px 0px 20px;
-    box-sizing: border-box;
-}
-.form2 input[type="submit"]{
-    width: 100%;
-    height: 60px;
-    background: #ffffff;
-    border: 2px solid white;
-    cursor: pointer;
-    font-size: 25px;
-    color:#1b4f72;
-}
-.form2 input[type="submit"]:hover{
-    background: #3498db;
-    color:white;
-}
 .referencias{
-    margin-left:110px;
-    margin-top: 14px; 
+    text-align: center;
+    margin: auto;
+    margin-top: 20px; 
 }
 .referencias a{
-    padding-left: 10px; 
+    padding-left: 10px;
+    text-align: center;
     text-decoration: none;
     color:#1b4f72;
 }
-
-.pie{
-    background: black;
-    width: 100%;
-    height: 30px;
-    font-size: 25px;
-    font-weight: 900;
-    color: #ffffff;
-    margin-top: 268px;
-    text-align: center;
-    
-}
 img{
-    width: 30px;
+    width: 35px;
+    height: 35px;
     float: left;
 }
 #btn-mas{
@@ -143,4 +121,13 @@ img{
 }
 
 
-
+.pie{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-top: 205px;
+    text-align: center;
+    background: #1b4f72;
+}
