@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    background: url(../Imagenes/fondofb.jpg);
+    background: url(../Imagenes/fondoventa.jpg);
+    background-size: cover;
+    
 }
 header{
     margin-top: 20px;
@@ -14,28 +16,54 @@ header{
     font-family: sans-serif;
     color: white;
 }
-.fabrica{
+.ventas{
     width: 100%;
 }
-.navegacion{
+
+.nav{
+    text-align: center;
     margin: 0;
     margin-top: 50px;
     width: 100%;
     background:  #1b4f72;
 }
-
-.navegacion ul{
+.nav ul{
     list-style: none;
 }
-.menu > li{
+.menu >li{
     position: relative;
     display: inline-block;
 }
+
 .menu > li:hover{
     background: #3498db;
     transition: all .3s;
 }
+
 .menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+form{
+    height: 500px;
+    position: absolute;
+    box-sizing: border-box;
+    background: #f9f7f7;
+    display: none;  
+}
+.menu>li>ul{
+    list-style: none;
+}
+.submenu li:hover{
+    background: #3498db;
+    transition: all .3s;
+}
+.submenu>li>a{
     display: block;
     padding: 15px 20px;
     color: white;
@@ -44,14 +72,30 @@ header{
     font-size: 18px;
     font-weight: bold;
 }
-
-.menu >li > form{
+.submenu{
     position: absolute;
-    background: #f9f7f7;
-    display: none;
+    visibility: hidden;
+    background: #1b4f72;
+    width: 300px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.submenu li{
+    width: 300px;
+}
+.submenu form{
+    margin-left: 100%; 
+    position: relative; 
     
 }
-.form{
+.menu>#sub:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.menu>#sub>ul>li:hover form{
+    display:inline-block;
+}
+form{
     text-align: center;
     width: 200%;
     height: 110px;
@@ -59,16 +103,16 @@ header{
     border: 1px solid white;
     box-sizing: border-box;
 }
-
-.menu li:hover form{
+.menu >li:hover .form{
     display: block;
 }
 
-.form input{
-    width: 100%;
-    height: 60px;
-    margin-top:20px;    
+form input{
+    width: 95%;
+    height: 50px;
+    margin-top: 8px;
 }
+
 .form input[type="submit"]{
     margin-top: 10px;
     width: 100%;
@@ -81,6 +125,11 @@ header{
     font-weight: 900;
 }
 
-.form input[type="submit"]:hover{
+form input[type="submit"]:hover{
     background: #3498db;
+}
+
+h3{
+    margin-top: 16px;
+    font-size: 22px;
 }

@@ -10,8 +10,8 @@ header{
     font-size: 30px;
 }
 body{
-    background: url(../Imagenes/fondo.jpg);
-    background-size: cover;
+    background: url(../Imagenes/fondo1.jpg);
+    background-size: contain;
 }
 .contenedor1{ 
     background: #f9f7f7;
