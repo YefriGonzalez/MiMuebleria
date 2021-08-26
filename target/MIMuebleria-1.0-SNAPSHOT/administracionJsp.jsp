@@ -9,9 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Area de Administracion|Mi Muebleria</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <header>
+            Area de Administracion
+        </header>
+        <div>
+           
+        </div>
     </body>
 </html>

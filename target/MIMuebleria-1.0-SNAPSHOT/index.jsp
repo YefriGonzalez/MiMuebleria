@@ -19,7 +19,7 @@
         </header>
         <div class="contenedor1">
             <h1>Sign in</h1>
-            <form class="form1" method="POST" action="">
+            <form class="form1" method="POST" action="usuario-servlet">
                 <img src="Imagenes/icono.png"/>
                 <input type="text" name="username" placeholder="Username" required/>
                 <hr>
