@@ -12,40 +12,60 @@ import java.time.LocalDate;
  * @author yefri
  */
 public class EnsambleMueble {
-    
+
     Mueble mueble;
     Usuario usuario;
     LocalDate fecha;
 
-    public EnsambleMueble(Mueble mueble, Usuario usuario, LocalDate fecha) {
-        this.mueble = mueble;
-        this.usuario = usuario;
-        this.fecha = fecha;
+    public EnsambleMueble(String mueble,String usuario, String fecha) {
+        try {
+            this.mueble = (Mueble) (Object) mueble;
+            this.usuario = (Usuario) (Object) usuario;
+            this.fecha = convertirFecha(fecha);
+        } catch (Exception e) {
+        }
     }
 
     public Mueble getMueble() {
         return mueble;
     }
 
-    public void setMueble(Mueble mueble) {
-        this.mueble = mueble;
+    public void setMueble(String mueble) {
+        try {
+            this.mueble = (Mueble)(Object) mueble;
+        } catch (Exception e) {
+        }
     }
 
     public Usuario getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuario(String usuario) {
+        try {
+            this.usuario = (Usuario) (Object) usuario;
+        } catch (Exception e) {
+        }
+        
     }
 
     public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+    public void setFecha(String fecha) {
+        try {
+            this.fecha = convertirFecha(fecha);   
+        } catch (Exception e) {
+        }
     }
-    
-    
+
+    public static LocalDate convertirFecha(String fecha) {
+        String[] fechaDividida = fecha.split("/");
+        int dia = Integer.valueOf(fechaDividida[0]);
+        int mes = Integer.valueOf(fechaDividida[1]);
+        int anio = Integer.valueOf(fechaDividida[2]);
+        return LocalDate.of(dia, mes, anio);
+    }
+
 }

@@ -1,4 +1,3 @@
-
 package com.mycompany.miMuebleria;
 
 /**
@@ -6,13 +5,18 @@ package com.mycompany.miMuebleria;
  * @author yefri
  */
 public class Pieza {
+
     private String tipoPieza;
     private double costoPieza;
 
-    public Pieza(String tipoPieza, double costoPieza) {
-        this.tipoPieza = tipoPieza;
-        this.costoPieza = costoPieza;
-    } 
+    public Pieza(String tipoPieza, String costoPieza) {
+        try {
+            this.tipoPieza = tipoPieza;
+            this.costoPieza = Double.valueOf(costoPieza);
+        } catch (NumberFormatException e) {
+        }
+
+    }
 
     public String getTipoPieza() {
         return tipoPieza;
@@ -26,9 +30,11 @@ public class Pieza {
         return costoPieza;
     }
 
-    public void setCostoPieza(double costoPieza) {
-        this.costoPieza = costoPieza;
+    public void setCostoPieza(String costoPieza) {
+        try {
+            this.costoPieza = Double.valueOf(costoPieza);
+        } catch (NumberFormatException e) {
+        }
     }
-    
-    
+
 }

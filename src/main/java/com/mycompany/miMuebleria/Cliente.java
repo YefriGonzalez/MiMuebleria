@@ -10,24 +10,32 @@ package com.mycompany.miMuebleria;
  * @author yefri
  */
 public class Cliente {
+
     private String nombre;
     private Integer NIT;
     private String direccion;
     private String municipio;
     private String departamento;
 
-    public Cliente(String nombre, Integer NIT, String direccion, String municipio, String departamento) {
-        this.nombre = nombre;
-        this.NIT = NIT;
-        this.direccion = direccion;
-        this.municipio = municipio;
-        this.departamento = departamento;
+    public Cliente(String nombre, String nit, String direccion, String municipio, String departamento) {
+        try {
+            this.nombre = nombre;
+            this.NIT = Integer.valueOf(nit);
+            this.direccion = direccion;
+            this.municipio = municipio;
+            this.departamento = departamento;
+        } catch (NumberFormatException e) {
+        }
     }
 
-    public Cliente(String nombre, Integer NIT, String direccion) {
-        this.nombre = nombre;
-        this.NIT = NIT;
-        this.direccion = direccion;
+    public Cliente(String nombre, String nit, String direccion) {
+        try {
+            this.nombre = nombre;
+            this.NIT = Integer.valueOf(nit);
+            this.direccion = direccion;
+        } catch (NumberFormatException e) {
+        }
+
     }
 
     public String getNombre() {
@@ -42,8 +50,12 @@ public class Cliente {
         return NIT;
     }
 
-    public void setNIT(Integer NIT) {
-        this.NIT = NIT;
+    public void setNIT(String NIT) {
+        try {
+            this.NIT = Integer.valueOf(NIT);
+        } catch (NumberFormatException e) {
+        }
+
     }
 
     public String getDireccion() {
@@ -69,6 +81,5 @@ public class Cliente {
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
-    
-    
+
 }

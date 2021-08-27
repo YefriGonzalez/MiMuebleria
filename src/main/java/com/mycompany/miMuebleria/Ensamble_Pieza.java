@@ -10,38 +10,51 @@ package com.mycompany.miMuebleria;
  * @author yefri
  */
 public class Ensamble_Pieza {
+
     private Pieza pieza;
     private int cantidad;
     private Mueble mueble;
 
-    public Ensamble_Pieza(Pieza pieza, int cantidad, Mueble mueble) {
-        this.pieza = pieza;
-        this.cantidad = cantidad;
-        this.mueble = mueble;
+    public Ensamble_Pieza(String pieza, String cantidad, String mueble) {
+        try {
+            this.pieza = (Pieza) (Object) (pieza);
+            this.cantidad = Integer.valueOf(cantidad);
+            this.mueble = (Mueble) (Object) mueble;
+        } catch (NumberFormatException e) {
+        }
     }
 
     public Pieza getPieza() {
         return pieza;
     }
 
-    public void setPieza(Pieza pieza) {
-        this.pieza = pieza;
+    public void setPieza(String pieza) {
+        try {
+            this.pieza = (Pieza)(Object)pieza;
+        } catch (Exception e) {
+        }
     }
 
     public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setCantidad(String cantidad) {
+        try {
+            this.cantidad = Integer.valueOf(cantidad);
+        } catch (NumberFormatException e) {
+        }
     }
 
     public Mueble getMueble() {
         return mueble;
     }
 
-    public void setMueble(Mueble mueble) {
-        this.mueble = mueble;
+    public void setMueble(String mueble) {
+        try {
+            this.mueble = (Mueble)(Object)mueble;
+        } catch (Exception e) {
+        }
     }
-    
+
 }

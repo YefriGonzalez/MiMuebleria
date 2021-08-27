@@ -13,11 +13,16 @@ public class Usuario {
     private String username;
     private String password;
     private int tipo;
+    private int estado;
 
-    public Usuario(String username, String password, int tipo) {
+    public Usuario(String username, String password, String tipo,String estado) {
+        try {
+        this.estado =Integer.valueOf(estado);
         this.username = username;
         this.password = password;
-        this.tipo = tipo;
+        this.tipo = Integer.valueOf(tipo);
+        } catch (NumberFormatException e) {
+        }
     }
 
     public String getUsername() {
@@ -40,9 +45,26 @@ public class Usuario {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public void setTipo(String tipo) {
+        try {
+            this.tipo = Integer.valueOf(tipo);
+        } catch (NumberFormatException e) {
+        }
+        
     }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        try {
+            this.estado = Integer.valueOf(estado);
+        } catch (NumberFormatException e) {
+        }
+    }
+
+    
     
   
 }
